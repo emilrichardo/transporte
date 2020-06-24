@@ -1,0 +1,271 @@
+//Colors
+$white : #fff;
+$primary: #0072BB;
+$secondary: #183153;
+$warning: #feeeb0;
+$danger: #DB251B;
+$dark : #313131;
+$success : #45c5b0; 
+$info : #b9dae9; 
+$light : #f8f5f5;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "warning": $warning,
+    "dark": $dark,
+    "info": $info,
+    "success": $success,
+    "white": $white,
+    "light": $light,
+);
+
+root{
+  --primary: $primary;
+  --secondary: $secondary;
+  --danger: $danger;
+  --warning: $warning;
+  --dark : $dark;
+  --white : $white;
+  --info: $info;
+  --light: $light;
+  --gradient: linear-gradient(-45deg,  $secondary, $primary, #201dc8, $info);
+}
+
+
+
+$body-color: $dark;
+$link-color: $danger;
+// Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+
+// Typography
+$font-family-sans-serif: 'Public Sans', sans-serif;
+
+//Font weight
+$font-weight-bold:           600;
+$font-weight-bolder:         700;
+
+
+
+
+
+// Heading font weight
+$headings-font-weight:   $font-weight-bold;
+
+
+
+//font size
+$font-size-base:              1rem; 
+$small-font-size:              0.667rem;
+
+//Heading sizes
+$h1-font-size:                $font-size-base * 5.036;
+$h2-font-size:                $font-size-base * 3.375;
+$h3-font-size:                $font-size-base * 2.25;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1;
+$h6-font-size:                $small-font-size * 1;
+
+
+
+
+    h1, .h1 { font-size: $h2-font-size!important; }
+    h2, .h2 { font-size: $h3-font-size!important; }
+    h3, .h3 { font-size: $h4-font-size!important; }
+    h4, .h4 { font-size: $h5-font-size!important; }
+    h5, .h5 { font-size: $font-size-base!important; }
+    h6, .h6 { font-size: $small-font-size!important; }
+
+
+
+
+
+
+
+//heading spacer
+$headings-line-height:        1;
+$headings-margin-bottom:      $spacer * 2 !default;
+
+
+
+//Display
+$display1-size:               11.391rem;
+$display2-size:               7.594rem;
+$display3-size:               $h1-font-size;
+$display4-size:               $h2-font-size;
+
+$display1-weight:             600;
+$display2-weight:             600;
+$display3-weight:             600;
+$display4-weight:             600;
+
+
+.display-1{  font-size:$display1-size !important;}
+.display-2{  font-size:$display2-size !important;}
+.display-3{  font-size:$display3-size !important;}
+.display-4{  font-size:$display4-size !important;}
+
+
+// paragraph
+
+@media (min-width:1200px){
+  .lead{
+    font-size: $h5-font-size;
+  }
+}
+
+$paragraph-margin-bottom:   2rem;
+
+
+
+
+// Butons
+
+$btn-border-radius:           5px;
+$btn-border-radius-lg:        5px;
+$btn-border-radius-sm:         5px;
+
+
+$btn-padding-y:               .8rem ;
+$btn-padding-x:               2.75rem ;
+$btn-font-size:               $small-font-size;
+
+$btn-padding-y-sm:            .4rem;
+$btn-padding-x-sm:            1rem;
+$btn-font-size-sm:            ($small-font-size * .8);
+
+
+$btn-padding-y-lg:            1.1rem ;
+$btn-padding-x-lg:            2.8rem;
+$btn-font-size-lg:            $h5-font-size;
+
+
+$btn-border-width:            0;
+
+
+$btn-focus-width:             0;
+$btn-focus-box-shadow:        none;
+$btn-disabled-opacity:        .40;
+$btn-active-box-shadow:       nonr;
+
+
+// forms
+
+
+
+
+
+
+
+
+
+$custom-select-background: transparent;
+$custom-select-bg: red;
+
+
+
+
+
+/*cards*/
+$card-cap-bg : $white;
+
+
+
+
+
+
+
+
+ @import "node_modules/bootstrap/scss/bootstrap";
+
+
+ @media (max-width:768px){
+  .btn-sm-block{
+    display: block;
+    width: 100%;
+  }
+ }
+
+
+
+
+
+
+//bg animated
+
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color:$white !important;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #ccc;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #DB9A60;
+}

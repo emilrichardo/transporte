@@ -1,0 +1,110 @@
+<footer>
+    <div class="container-fluid">
+        
+        <div class="row mt-5">
+            <div class="col-12 col-md-3 mb-4">
+                <div class="logo-footer">
+                    <img src="img/DGTSDE_Logo_Horizontal_Color_Full.svg" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-md-auto mb-4">
+                <small>Av. Roca Norte 101 <br>4200 Santiago del Estero</small>                
+            </div>
+            <div class="col-6 col-md-auto mb-4">
+                <small>
+                    8:15hs - 16:00hs <br>
+                    0385 421-4205
+                </small>                
+            </div>
+            <div class="col-12 col-md-auto mb-4 ml-auto">
+                <a href="https://play.google.com/store/apps/details?id=com.DGTSE.DGTSE"><img src="img/Google-Play_Store-App.jpg" alt=""></a>                
+            </div>
+            
+        </div>
+        <div class="copy"></div>
+    </div>
+</footer>
+
+
+
+<script src="js/all.js"></script>
+
+<script>
+var wow = new WOW( {
+    mobile:    false
+  });
+wow.init();
+</script>
+
+
+
+<script type="text/javascript">  
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    } else {
+    document.getElementById("navbar").style.top = "0px";
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+
+    /* ============================================== */
+    /* EFFECT MENU */
+    /* ============================================== */
+
+    $(function(){
+        jQuery(window).scroll(function () {
+            if (jQuery(window).scrollTop() > 30) {
+                jQuery(".navigation-fixed-top").addClass("effect");
+                jQuery(".navigation-fixed").addClass("effect");
+            } else {
+                jQuery(".navigation-fixed-top").removeClass("effect");
+                jQuery(".navigation-fixed").removeClass("effect");
+            }
+            if (jQuery(window).scrollTop() > 180) {
+                jQuery(".section-main").addClass("effect");                
+            } else {
+                jQuery(".section-main").removeClass("effect");                
+            }
+
+            if (jQuery(window).scrollTop() > 270) {
+                jQuery(".section-main").addClass("op-0");                
+            } else {
+                jQuery(".section-main").removeClass("op-0");                
+            }
+        });
+    });
+
+    $("#toggle").click(function() {
+        $(this).toggleClass("on");
+         $("#menu").toggleClass("open");
+         
+
+         if($(this).attr('class') == 'on'){
+          	$("body").addClass('menu-open');
+          }else{ 
+          	$("body").removeClass('menu-open');
+          }
+        
+        
+    });
+
+
+
+    $("#menu li a").click(function() {          
+        $("#menu").removeClass('open');
+        $("#toggle").toggleClass("on");
+        $("body").removeClass('menu-open');
+    });
+
+
+ 
+   
+
+</script>
+</body>
+</html>
