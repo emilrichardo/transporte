@@ -58,6 +58,12 @@ body{
     max-width: 100px;   
 }
 
+@media (min-width:900px){
+  .brand{
+    min-width: 400px;
+  }
+}
+
 
 
 .brand img:nth-child(2){
