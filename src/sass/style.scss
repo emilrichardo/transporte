@@ -3,7 +3,7 @@ $white : #fff;
 $primary: #0072BB;
 $secondary: #183153;
 $warning: #feeeb0;
-$danger: #DB251B;
+$danger: #cc544e;
 $dark : #313131;
 $success : #45c5b0; 
 $info : #b9dae9; 
@@ -132,7 +132,10 @@ $display4-weight:             600;
 $paragraph-margin-bottom:   2rem;
 
 
-
+$mark-bg : $secondary;
+mark , .mark, p mark{
+  color: $white;
+}
 
 // Butons
 

@@ -11,7 +11,7 @@ html,body{
 body{
     overflow-x: hidden;
     width: 100vw;
-    
+    background-color: var(--light);
 }
 
 
@@ -347,7 +347,7 @@ section{
 }
 @media (min-width:1200px){
     .container-fluid{
-        padding: 0 80px;
+        padding: 0 60px;
     }
 }/*+1200*/
 
@@ -385,18 +385,29 @@ section.turno:after{
   width: 100%;
   height: 100%;
   background:   url("../img/auto.jpg") ;
-  background-size: cover;
+  
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
   z-index:0;
-  opacity: .13;
+  
+  animation-name: bg-xpand;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-position: center;
+  animation-direction: alternate;
+}
+
+@keyframes bg-xpand {
+  from {background-size: auto 100%;opacity: .1;}
+  to {background-size: auto 120%;opacity: .3;}
 }
 
 section.turno .container-fluid{
   position: relative;
   z-index: 1;
 }
+
 
 
 

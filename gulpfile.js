@@ -56,9 +56,13 @@ function img() {
 }
 
 function fonts() {
-    return gulp.src('src/fonts/*/*')        
+    return gulp.src('src/fonts/*/*/*')        
         .pipe(gulp.dest('public/fonts/'));
 }
+
+
+
+
 
 function serve() {
     browserSync.init({
